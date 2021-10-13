@@ -1,0 +1,8 @@
+<h2>Cool Water Bottles for Sale</h2>
+<div class="item-list-container">
+
+    <div class="item-list__item" *ngFor="let inventoryItem of data">
+        <app-inventory-item [item]="inventoryItem" (addItemEvent)="onAddItemEvent($event)"></app-inventory-item>
+    </div>
+
+</div>

@@ -1,0 +1,26 @@
+<div class="cart-view-container">
+
+    <div class="cart-view-header">
+        <h2>Number of Current Items: {{ cart?.numberOfItems }}</h2>
+        <h3>Total Cost {{ cart?.total | currency:'GBP' }}</h3>
+    </div>
+
+    <div class="cart-item-list">
+        <mat-list>
+
+            <mat-list-item *ngFor="let item of cart?.items">
+                <mat-icon mat-list-icon (click)="remove(item)">delete</mat-icon>
+                <div mat-line class="line-name">
+                    {{ item.itemName }}
+                </div>
+                <div mat-line class="line-desc">
+                    {{ item.itemDesc }}
+                </div>
+                <div mat-line class="line-cost">
+                    {{ item.itemCost | currency:'GBP' }}
+                </div>
+                <mat-divider></mat-divider>
+            </mat-list-item>
+        </mat-list>
+    </div>
+</div>

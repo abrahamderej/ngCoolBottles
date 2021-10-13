@@ -1,0 +1,30 @@
+<div class="inventory-item-container">
+
+    <mat-card class="item-card">
+
+        <mat-card-header>
+
+            <mat-card-title>
+                {{ item?.itemName }}
+            </mat-card-title>
+
+            <mat-card-subtitle>
+                {{ item?.itemCost | currency:'GBP' }}
+            </mat-card-subtitle>
+
+        </mat-card-header>
+
+        <img mat-card-image [src]="item?.itemImageUri | inventoryImage">
+
+        <mat-card-content>
+            <p>
+                {{ item?.itemDesc }}
+            </p>
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button mat-raised-button color="accent" (click)="addToCart()" >Add To Cart</button>
+        </mat-card-actions>
+
+    </mat-card>
+</div>

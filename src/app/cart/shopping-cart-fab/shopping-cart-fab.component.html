@@ -1,0 +1,7 @@
+<div class="cart-fab-container">
+    
+    <mat-icon [matBadge]="numberOfItemsInCart" matBadgeColor="warn" *ngIf="numberOfItemsInCart > 0">shopping_cart</mat-icon>
+
+    <mat-icon *ngIf="numberOfItemsInCart === 0">shopping_cart</mat-icon>
+
+</div>
