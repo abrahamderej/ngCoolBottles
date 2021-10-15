@@ -123,6 +123,7 @@
   },
   "defaultProject": "ngCoolBottles",
   "cli": {
-    "defaultCollection": "@angular-eslint/schematics"
+    "defaultCollection": "@angular-eslint/schematics",
+    "analytics": "4d70041d-7913-46f5-a1dc-ed9bc01e3b43"
   }
 }
